@@ -1,7 +1,7 @@
 Git Flow
 ===
 
-![git-flow](http://laisky-blog.qiniudn.com/151216-flow.jpg)
+![git-flow](https://s2.laisky.com/uploads/images/151216-flow.jpg)
 
 ## Resources
 
