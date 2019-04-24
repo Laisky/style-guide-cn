@@ -1,4 +1,4 @@
-Movoto Development Style Guide
+Python Style Guide
 ===
 
 ## Style Guide Documents
