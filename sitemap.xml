@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2019-04-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/style-guides/source-code-style-guides/</loc>
+     <lastmod>2019-04-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/style-guides/consensuses/</loc>
+     <lastmod>2019-04-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/style-guides/git-flow/</loc>
+     <lastmod>2019-04-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/style-guides/git-commit/</loc>
+     <lastmod>2019-04-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/style-guides/design-patterns/</loc>
+     <lastmod>2019-04-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/milestones/</loc>
+     <lastmod>2019-04-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

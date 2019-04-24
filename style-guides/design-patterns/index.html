@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Design Patterns - Movoto Development Style Documents</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Movoto Development Style Documents</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Style Guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../source-code-style-guides/">Sources</a>
+</li>
+                            
+<li >
+    <a href="../consensuses/">Consensuses</a>
+</li>
+                            
+<li >
+    <a href="../git-flow/">Git Flow</a>
+</li>
+                            
+<li >
+    <a href="../git-commit/">Git Commit</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Design Patterns</a>
+</li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="../../milestones/">MileStones</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../git-commit/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../milestones/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#design-patterns-of-object-oriented-programming">Design Patterns of Object Oriented Programming</a></li>
+            <li><a href="#_1">模式</a></li>
+            <li><a href="#strategy-pattern">策略模式 Strategy Pattern</a></li>
+            <li><a href="#observer-pattern">观察者模式 Observer Pattern</a></li>
+            <li><a href="#decorator-pattern">装饰者模式 Decorator Pattern</a></li>
+            <li><a href="#factory-method-pattern">工厂模式 Factory Method Pattern</a></li>
+            <li><a href="#abstract-factory-pattern">抽象工厂模式 Abstract Factory Pattern</a></li>
+            <li><a href="#singleton-pattern">单件模式 Singleton Pattern</a></li>
+            <li><a href="#command-pattern">命令模式 Command Pattern</a></li>
+            <li><a href="#macro-command-pattern">宏命令模式 Macro Command Pattern</a></li>
+            <li><a href="#adapter-pattern">适配器模式 Adapter Pattern</a></li>
+            <li><a href="#facade-pattern">外观模式 Facade Pattern</a></li>
+            <li><a href="#least-knowledge">最小知识原则 Least Knowledge</a></li>
+            <li><a href="#template-pattern">模板方法 Template Pattern</a></li>
+            <li><a href="#_2">好莱坞原则</a></li>
+            <li><a href="#iterator-pattern">Iterator Pattern 迭代器模式</a></li>
+            <li><a href="#composite-pattern">Composite Pattern 组合模式</a></li>
+            <li><a href="#state-pattern">State Pattern 状态模式</a></li>
+            <li><a href="#proxy-pattern">Proxy Pattern 代理模式</a></li>
+            <li><a href="#compound-pattern">Compound Pattern 复合模式</a></li>
+            <li><a href="#bridge-pattern">Bridge Pattern 桥接模式</a></li>
+            <li><a href="#builder-pattern">Builder Pattern 生成器模式</a></li>
+            <li><a href="#chain-of-responsibility-pattern">Chain of Responsibility Pattern 责任链模式</a></li>
+            <li><a href="#flyweight-pattern">Flyweight Pattern 蝇量模式</a></li>
+            <li><a href="#interpreter-pattern">Interpreter Pattern 解释器模式</a></li>
+            <li><a href="#mediator-pattern">Mediator Pattern 中介者模式</a></li>
+            <li><a href="#memento-pattern">Memento Pattern 备忘录模式</a></li>
+            <li><a href="#_3">原型模式</a></li>
+            <li><a href="#visitor-pattern">Visitor Pattern 访问者模式</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="design-patterns-of-object-oriented-programming">Design Patterns of Object Oriented Programming</h1>
+<h2 id="_1">模式</h2>
+<h2 id="strategy-pattern">策略模式 Strategy Pattern</h2>
+<h2 id="observer-pattern">观察者模式 Observer Pattern</h2>
+<h2 id="decorator-pattern">装饰者模式 Decorator Pattern</h2>
+<h2 id="factory-method-pattern">工厂模式 Factory Method Pattern</h2>
+<h2 id="abstract-factory-pattern">抽象工厂模式 Abstract Factory Pattern</h2>
+<h2 id="singleton-pattern">单件模式 Singleton Pattern</h2>
+<h2 id="command-pattern">命令模式 Command Pattern</h2>
+<h2 id="macro-command-pattern">宏命令模式 Macro Command Pattern</h2>
+<h2 id="adapter-pattern">适配器模式 Adapter Pattern</h2>
+<h2 id="facade-pattern">外观模式 Facade Pattern</h2>
+<h2 id="least-knowledge">最小知识原则 Least Knowledge</h2>
+<h2 id="template-pattern">模板方法 Template Pattern</h2>
+<h2 id="_2">好莱坞原则</h2>
+<h2 id="iterator-pattern">Iterator Pattern 迭代器模式</h2>
+<h2 id="composite-pattern">Composite Pattern 组合模式</h2>
+<h2 id="state-pattern">State Pattern 状态模式</h2>
+<h2 id="proxy-pattern">Proxy Pattern 代理模式</h2>
+<h2 id="compound-pattern">Compound Pattern 复合模式</h2>
+<h2 id="bridge-pattern">Bridge Pattern 桥接模式</h2>
+<h2 id="builder-pattern">Builder Pattern 生成器模式</h2>
+<h2 id="chain-of-responsibility-pattern">Chain of Responsibility Pattern 责任链模式</h2>
+<h2 id="flyweight-pattern">Flyweight Pattern 蝇量模式</h2>
+<h2 id="interpreter-pattern">Interpreter Pattern 解释器模式</h2>
+<h2 id="mediator-pattern">Mediator Pattern 中介者模式</h2>
+<h2 id="memento-pattern">Memento Pattern 备忘录模式</h2>
+<h2 id="_3">原型模式</h2>
+<h2 id="visitor-pattern">Visitor Pattern 访问者模式</h2></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
