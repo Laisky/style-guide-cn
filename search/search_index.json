@@ -2,13 +2,13 @@
     "docs": [
         {
             "location": "/",
-            "text": "Movoto Development Style Guide\n\n\nStyle Guide Documents\n\n\n\n\nSource Code Style Guide\n\n\nConsensuses\n\n\nGit Flow\n\n\nGit Commit\n\n\nDesign Patterns\n\n\n\n\nOptimization Milestones\n\n\n\n\nMilestones",
+            "text": "Python Style Guide\n\n\nStyle Guide Documents\n\n\n\n\nSource Code Style Guide\n\n\nConsensuses\n\n\nGit Flow\n\n\nGit Commit\n\n\nDesign Patterns\n\n\n\n\nOptimization Milestones\n\n\n\n\nMilestones",
             "title": "Home"
         },
         {
-            "location": "/#movoto-development-style-guide",
+            "location": "/#python-style-guide",
             "text": "",
-            "title": "Movoto Development Style Guide"
+            "title": "Python Style Guide"
         },
         {
             "location": "/#style-guide-documents",
