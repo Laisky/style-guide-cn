@@ -98,7 +98,8 @@ with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
 
 ## 函数
 
-> Do not Repeat Yourself!
+> * (DRY) Do not Repeat Yourself!
+> * (KISS) Keep It Simple and Stupid!
 
 1. 每一个函数最好只有单一功能；
 2. 每一个函数的长度最好不要超过 50 行；
@@ -127,6 +128,11 @@ def simple_func(arg1, arg2):
 ```
 
 *（在 Python3.4 更进一步引入了 Type Hint，以实现更严格的接口规范。）*
+
+
+## 12-Factor App
+
+<https://12factor.net>
 
 
 ## 类
