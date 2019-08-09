@@ -107,6 +107,7 @@
             <li><a href="#_2">编码</a></li>
             <li><a href="#_3">时区</a></li>
             <li><a href="#_4">函数</a></li>
+            <li><a href="#12-factor-app">12-Factor App</a></li>
             <li><a href="#_5">类</a></li>
             <li><a href="#_6">项目文件夹</a></li>
             <li><a href="#_7">版本管理</a></li>
@@ -200,7 +201,10 @@ with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
 <p>建议所有的 datetime 都包含正确的时区，如果不愿意处理时区，那就请统一使用 UTC，而仅在客户端呈现时根据用户所在时区进行转换显示。</p>
 <h2 id="_4">函数</h2>
 <blockquote>
-<p>Do not Repeat Yourself!</p>
+<ul>
+<li>(DRY) Do not Repeat Yourself!</li>
+<li>(KISS) Keep It Simple and Stupid!</li>
+</ul>
 </blockquote>
 <ol>
 <li>每一个函数最好只有单一功能；</li>
@@ -228,10 +232,9 @@ with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
 </code></pre>
 
 <p><em>（在 Python3.4 更进一步引入了 Type Hint，以实现更严格的接口规范。）</em></p>
+<h2 id="12-factor-app">12-Factor App</h2>
+<p><a href="https://12factor.net">https://12factor.net</a></p>
 <h2 id="_5">类</h2>
-<blockquote>
-<p>Keep It Simple and Stupid!</p>
-</blockquote>
 <ol>
 <li>类应该是某一种对象的抽象或封装（而不是用来收集函数的！）；</li>
 <li>控制类的属性，一般认为不应超过 6 个；</li>
