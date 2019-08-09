@@ -88,6 +88,14 @@ with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
 
 *（我们这种纯英文的使用场景，其实绕过了编码的问题。）*
 
+
+## 时区
+
+`datetime.datetime` 分为 naive 和 aware，可以简单的理解为包含时区和不包含时区。
+
+建议所有的 datetime 都包含正确的时区，如果不愿意处理时区，那就请统一使用 UTC，而仅在客户端呈现时根据用户所在时区进行转换显示。
+
+
 ## 函数
 
 > Do not Repeat Yourself!
