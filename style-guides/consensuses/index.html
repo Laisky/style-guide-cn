@@ -132,15 +132,11 @@
 </blockquote>
 <ol>
 <li>Python2.x 的编码是随操作系统的，Python3.x 的编码是固定的；</li>
-<li>使用 Python2.x 时最好手动固定编码；<ol>
+<li>使用 Python2.x 时最好手动固定编码；</li>
 <li>Python2.x 的官方解决办法是 <code>from __future__ import unicode_literals</code>;</li>
-</ol>
-</li>
-<li>在程序和头脑里清楚的划分系统的边界以及数据的流动<ol>
+<li>在程序和头脑里清楚的划分系统的边界以及数据的流动</li>
 <li>任何进入的数据（bytes）都要经过 decode；</li>
 <li>任何流出的数据（unicode）都要经过 encode；</li>
-</ol>
-</li>
 <li>一般使用 utf8/unicode。</li>
 </ol>
 <p>Demo:</p>
@@ -154,11 +150,46 @@ from __future__ import unicode_literals
 import codecs
 
 
-# 相当于 open('file', 'r').read().decode('utf8')
+# 相当于 open('file', 'rb').read().decode('utf8)
 unicode_data = codecs.open('file', 'r', 'utf8').read()
 
-# 相当于 open('file', 'w').write(unicode_data.encode('utf8'))
+# 相当于 open('file', 'wb').write(unicode_data.encode('utf8'))
 codecs.open('file', 'w', 'utf8').write(unicode_data)
+</code></pre>
+
+<p>一个稍微复杂点的例子：</p>
+<pre><code class="py">unicode_data = '123'
+utf8_bytes = unicode_data.encode('utf8')
+gbk_bytes = unicode_data.encode('gbk')
+
+print(type(unicode_data))
+print(type(utf8_bytes))
+print(type(gbk_bytes))
+
+# &lt;class 'str'&gt;
+# &lt;class 'bytes'&gt;
+# &lt;class 'bytes'&gt;
+
+import tempfile
+
+with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
+        tempfile.TemporaryFile(mode='wb+') as gbk_fp:
+
+    utf_fp.write(utf8_bytes)
+    gbk_fp.write(gbk_bytes)
+
+    utf_fp.seek(0, 0)
+    gbk_fp.seek(0, 0)
+
+
+    utf8_bytes_2 = utf_fp.read()
+    gbk_bytes_2 = gbk_fp.read()
+
+    assert utf8_bytes_2 == utf8_bytes
+    assert gbk_bytes_2 == gbk_bytes
+
+    assert utf8_bytes_2.decode('utf8') == gbk_bytes_2.decode('gbk')
+
 </code></pre>
 
 <p><em>（注意 Python 2 和 3 中对 string 的定义是不同的，2 的 string 相当于 3 的 bytes。）</em></p>
@@ -198,7 +229,8 @@ codecs.open('file', 'w', 'utf8').write(unicode_data)
 <p>Keep It Simple and Stupid!</p>
 </blockquote>
 <ol>
-<li>类应该是某一种对象的抽象或封装；</li>
+<li>类应该是某一种对象的抽象或封装（而不是用来收集函数的！）；</li>
+<li>控制类的属性，一般认为不应超过 6 个；</li>
 <li>复杂类应该善用类继承和 mixin；</li>
 <li>尽量不要用 metaclass、new 等方法，除非你明白你在干什么；</li>
 <li>类应该有类注释和方法注释；</li>
@@ -265,7 +297,11 @@ from . import zzz
 <li>pip7 以后支持 git 协议，所以已经没什么理由不使用 package 了；</li>
 <li>打包可以实现很多东西，如生成可执行文件、cffi 依赖，etc；</li>
 <li>打包时要有良好的版本号机制；</li>
-</ol></div>
+</ol>
+<p>建议所有的 python 项目都打包为一个 package，其他项目需要依赖时，可以直接通过 pip 进行安装。</p>
+<p>一个简单的设置 package 的例子：<a href="https://github.com/Laisky/kipp/blob/master/setup.py">https://github.com/Laisky/kipp/blob/master/setup.py</a></p>
+<p>对于内部 VCS（如 Git） 上的项目，可以直接在 <code>requirements.txt</code> 里这么写 <code>-e git+https://&lt;username&gt;:&lt;password&gt;@&lt;internal git url&gt;/&lt;group name&gt;/&lt;project name&gt;.git@&lt;branch name&gt;#egg=&lt;package name&gt;</code>。</p>
+<p>最好不要简单粗暴的用 <code>pip freeze</code> 来生成 <code>requirements</code>。</p></div>
         </div>
 
         <footer class="col-md-12">
