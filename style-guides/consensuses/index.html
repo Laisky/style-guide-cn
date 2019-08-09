@@ -105,11 +105,12 @@
         <li class="main active"><a href="#consensuses">Consensuses</a></li>
             <li><a href="#_1">作用域</a></li>
             <li><a href="#_2">编码</a></li>
-            <li><a href="#_3">函数</a></li>
-            <li><a href="#_4">类</a></li>
-            <li><a href="#_5">项目文件夹</a></li>
-            <li><a href="#_6">版本管理</a></li>
-            <li><a href="#_7">包依赖</a></li>
+            <li><a href="#_3">时区</a></li>
+            <li><a href="#_4">函数</a></li>
+            <li><a href="#_5">类</a></li>
+            <li><a href="#_6">项目文件夹</a></li>
+            <li><a href="#_7">版本管理</a></li>
+            <li><a href="#_8">包依赖</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -194,7 +195,10 @@ with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
 
 <p><em>（注意 Python 2 和 3 中对 string 的定义是不同的，2 的 string 相当于 3 的 bytes。）</em></p>
 <p><em>（我们这种纯英文的使用场景，其实绕过了编码的问题。）</em></p>
-<h2 id="_3">函数</h2>
+<h2 id="_3">时区</h2>
+<p><code>datetime.datetime</code> 分为 naive 和 aware，可以简单的理解为包含时区和不包含时区。</p>
+<p>建议所有的 datetime 都包含正确的时区，如果不愿意处理时区，那就请统一使用 UTC，而仅在客户端呈现时根据用户所在时区进行转换显示。</p>
+<h2 id="_4">函数</h2>
 <blockquote>
 <p>Do not Repeat Yourself!</p>
 </blockquote>
@@ -224,7 +228,7 @@ with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
 </code></pre>
 
 <p><em>（在 Python3.4 更进一步引入了 Type Hint，以实现更严格的接口规范。）</em></p>
-<h2 id="_4">类</h2>
+<h2 id="_5">类</h2>
 <blockquote>
 <p>Keep It Simple and Stupid!</p>
 </blockquote>
@@ -249,7 +253,7 @@ with tempfile.TemporaryFile(mode='wb+') as utf_fp, \
         pass
 </code></pre>
 
-<h2 id="_5">项目文件夹</h2>
+<h2 id="_6">项目文件夹</h2>
 <ol>
 <li>相似功能的类或函数放到一个子目录里（比如 MVC 模型）；</li>
 <li>被广泛依赖的工具方法应该单独放到一个 utils 或 libs 文件夹中。</li>
@@ -283,7 +287,7 @@ from . import zzz
 
 </code></pre>
 
-<h2 id="_6">版本管理</h2>
+<h2 id="_7">版本管理</h2>
 <p>我们一般依赖以下两个标准定义版本号：</p>
 <ul>
 <li><a href="http://semver.org/#semantic-versioning-200">Semantic Versioning 2.0.0</a>;</li>
@@ -292,7 +296,7 @@ from . import zzz
 <p>你可以简单粗暴的这么记：<code>&lt;major&gt;.&lt;features&gt;.&lt;bugfixes&gt;</code>。</p>
 <p>版本号一般放在根路径的 <code>__init__.py</code> 里，以 <code>__version__</code> 变量的形式定义。</p>
 <p><em>（OpenStack 定义了另外一套 pbr 的自动化版本管理机制。）</em></p>
-<h2 id="_7">包依赖</h2>
+<h2 id="_8">包依赖</h2>
 <ol>
 <li>pip7 以后支持 git 协议，所以已经没什么理由不使用 package 了；</li>
 <li>打包可以实现很多东西，如生成可执行文件、cffi 依赖，etc；</li>
