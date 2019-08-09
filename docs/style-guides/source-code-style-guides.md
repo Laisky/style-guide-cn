@@ -5,13 +5,13 @@ Source Code Style Guides
 
 English Editions：
 
-  - [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
-  - [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
+* [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+* [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 
 中文版：
 
-  - [python代码风格指南：pep8 中文翻译](https://my.oschina.net/u/1433482/blog/464444)
-  - [Google: Python语言规范](http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_language_rules/#lexical-scoping)
+* [python代码风格指南：pep8 中文翻译](https://my.oschina.net/u/1433482/blog/464444)
+* [Google: Python语言规范](http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_language_rules/#lexical-scoping)
 
 ---
 

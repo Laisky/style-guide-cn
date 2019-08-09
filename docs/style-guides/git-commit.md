@@ -1,5 +1,5 @@
-Git Commit Format Guide
-===
+# Git Commit Format Guide
+
 
 ## Introduction
 
