@@ -10,7 +10,7 @@ English Editions：
 
 中文版：
 
-* [python代码风格指南：pep8 中文翻译](https://my.oschina.net/u/1433482/blog/464444)
+* [python代码风格指南：pep8 中文翻译](https://python.freelycode.com/contribution/detail/47)
 * [Google: Python语言规范](http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_language_rules/#lexical-scoping)
 
 ---
