@@ -19,6 +19,8 @@ English Editions：
 
 可以在各个 IDE 的插件管理器里搜索类似“flake”、“pep8”、“lint”字样的插件，一般都是提供格式检查的功能。
 
+建议使用 [black](https://github.com/psf/black) 格式化 Python 代码。
+
 
 ### For Atom
 

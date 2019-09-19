@@ -137,8 +137,6 @@ def simple_func(arg1, arg2):
 
 ## 类
 
-> Keep It Simple and Stupid!
-
 1. 类应该是某一种对象的抽象或封装（而不是用来收集函数的！）；
 2. 控制类的属性，一般认为不应超过 6 个；
 3. 复杂类应该善用类继承和 mixin；
