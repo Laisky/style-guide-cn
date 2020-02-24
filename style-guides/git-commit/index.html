@@ -105,11 +105,13 @@
         <li class="main active"><a href="#git-commit-format-guide">Git Commit Format Guide</a></li>
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#commitizen-style">Commitizen Style</a></li>
+            <li><a href="#merge">Merge</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="git-commit-format-guide">Git Commit Format Guide</h1>
+<p>本文介绍 git commit 时需要输入的内容。</p>
 <h2 id="introduction">Introduction</h2>
 <p>Git commit 的 comment 主要分为两个部分：title 和 description。</p>
 <p>后来人们为了能在 commit 的 comment 内包含更多的信息，以便于和日益丰富的 CI 系统做集成，
@@ -134,6 +136,7 @@
   test:     Adding missing tests or correcting existing tests
 </code></pre>
 
+<p>一般建议和 jira／issue 等需求管理工具配合使用，相应的 commit 格式就如：<code>feat(paas-123): brief description</code>。</p>
 <h3 id="description">Description</h3>
 <p>Description 一般被分为两段：详细描述和关联操作，已空行隔开。</p>
 <p>一个完整提交信息形如：</p>
@@ -145,7 +148,7 @@ closes #11
 </code></pre>
 
 <p>可以看出这是一次 feat 类型的提交，并且附带了描述，这次提交的生效还会自动关闭 #11 号 issue。</p>
-<h3 id="install">Install</h3>
+<h3 id="commitizen">Commitizen</h3>
 <p>commitizen 提供了方便的基于 node 的命令行工具 <code>git cz</code>。</p>
 <p>可参考官方文档：<a href="https://github.com/commitizen/cz-cli">https://github.com/commitizen/cz-cli</a>。</p>
 <p>如果你已安装有 nodejs，可简单的在项目根路径执行：</p>
@@ -157,7 +160,11 @@ $ sudo npm --registry=https://registry.npm.taobao.org \
 
 # 然后就可运行
 $ git cz
-</code></pre></div>
+</code></pre>
+
+<h2 id="merge">Merge</h2>
+<p>需要注意的是，在执行 merge 操作时，建议不要修改 commit 内容，
+保证完整的 merge commit 信息，以默认的 <code>Merge branch</code> 开头。</p></div>
         </div>
 
         <footer class="col-md-12">
