@@ -1,5 +1,6 @@
 # Git Commit Format Guide
 
+本文介绍 git commit 时需要输入的内容。
 
 ## Introduction
 
@@ -37,6 +38,8 @@ title 的规范五花八门，commitizen 和 pbr 各搞了一套。
   test:     Adding missing tests or correcting existing tests
 ```
 
+一般建议和 jira／issue 等需求管理工具配合使用，相应的 commit 格式就如：`feat(paas-123): brief description`。
+
 ### Description
 
 Description 一般被分为两段：详细描述和关联操作，已空行隔开。
@@ -54,7 +57,7 @@ closes #11
 可以看出这是一次 feat 类型的提交，并且附带了描述，这次提交的生效还会自动关闭 #11 号 issue。
 
 
-### Install
+### Commitizen
 
 commitizen 提供了方便的基于 node 的命令行工具 `git cz`。
 
@@ -72,3 +75,9 @@ $ sudo npm --registry=https://registry.npm.taobao.org \
 # 然后就可运行
 $ git cz
 ```
+
+
+## Merge
+
+需要注意的是，在执行 merge 操作时，建议不要修改 commit 内容，
+保证完整的 merge commit 信息，以默认的 `Merge branch` 开头。
